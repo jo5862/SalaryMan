@@ -36,7 +36,7 @@
 3.  **OpenVINO 모델 다운로드 확인:** 프로젝트 실행 시 `horizontal-text-detection-0001` 모델이 `./hellow-detection/model` 디렉토리에 존재하는지 확인합니다<sup>1</sup>.... 모델이 없다면 다운로드해야 한다는 메시지가 출력되고 프로그램이 종료됩니다<sup>8</sup>. OpenVINO Model Downloader 또는 브라우저를 통해 직접 다운로드하여 해당 경로에 저장할 수 있습니다.
 4.  **실행:**
     ```bash
-    python your_main_script.py  # 실제 실행 파일명으로 변경
+    python OpenVino_business_card.py  
     ```
 5.  **사용 방법:**
     * 웹캠이 활성화되면 카메라 화면이 표시됩니다<sup>6</sup>....
