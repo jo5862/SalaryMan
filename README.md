@@ -9,7 +9,8 @@
 
 ## 2.Skill & Tool
 
-* Python
+
+* Python:
 
 * OpenCV: 카메라 스트림 처리 및 이미지 조작에 사용
 
@@ -18,6 +19,7 @@
 * PyTesseract: 이미지에서 텍스트를 추출하기 위한 OCR라이브러리
 
 * horizontial-text-detection-0001: OpenVINO 수평 텍스트 감지모델
+
 
 ## 3.시스템 구성
 
