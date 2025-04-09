@@ -10,10 +10,15 @@
 ## &nbsp;2.Skill & Tool
 
 •Python
+
 •OpenCV
+
 •OpenVINO
+
 •PyTesseract
+
 •horizontial-text-detection-0001
+
 •Tesseract OCR
 
 ## 3.시스템 구성
