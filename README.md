@@ -10,7 +10,7 @@
 ## 2.Skill & Tool
 
 
-* Python:
+* Python
 
 * OpenCV: 카메라 스트림 처리 및 이미지 조작에 사용
 
@@ -22,30 +22,31 @@
 
 
 ## 3.시스템 구성
-
-1.  **웹 카메라 입력:** 실시간으로 명함 이미지를 캡처합니다<sup>3</sup>.
-2.  **OpenVINO 텍스트 감지** 캡쳐 이미지에서 텍스트 영역 감지<sup>3</sup>.
-
+![Flowchart](./img/01_flowchart.png)
+1.  **웹 카메라 입력:** 실시간으로 명함 이미지를 캡처합니다.
+2.  **OpenVINO 텍스트 감지** 캡쳐 이미지에서 텍스트 영역 감지.
+3.  **Tesseract OCR 텍스트 추출** 감지 영역 내 
 ## 4.설치 및 실행방법
 
 1.  **필수 라이브러리 설치:**
     ```bash
-    pip install opencv-python numpy pytesseract openvino-dev
+    pip install -r requitements.txt
     ```
-2.  **Tesseract OCR 엔진 설치:** Tesseract OCR 엔진을 별도로 설치해야 합니다. 운영체제에 맞는 설치 방법을 검색하여 설치하십시오. 또한, Python에서 Tesseract를 사용하기 위해 Tesseract 실행 파일의 경로를 `pytesseract`에 설정해야 할 수도 있습니다.
-3.  **OpenVINO 모델 다운로드 확인:** 프로젝트 실행 시 `horizontal-text-detection-0001` 모델이 `./hellow-detection/model` 디렉토리에 존재하는지 확인합니다<sup>1</sup>.... 모델이 없다면 다운로드해야 한다는 메시지가 출력되고 프로그램이 종료됩니다<sup>8</sup>. OpenVINO Model Downloader 또는 브라우저를 통해 직접 다운로드하여 해당 경로에 저장할 수 있습니다.
+2.  **Tesseract OCR 엔진 설치:** Tesseract OCR 엔진을 별도로 설치해야 합니다. 운
+3.  **OpenVINO 모델 다운로드 확인:** 프로젝트 실행 시 `horizontal-text-detection-0001` 모델이 `./hellow-detection/model` 디렉토리에 존재하는지 확인합니다
+모델이 없다면 다운로드해야 한다는 메시지가 출력되고 프로그램이 종료됩니다. OpenVINO Model Downloader 또는 브라우저를 통해 직접 다운로드하여 해당 경로에 저장할 수 있습니다.
 4.  **실행:**
     ```bash
     python OpenVino_business_card.py  
     ```
 5.  **사용 방법:**
-    * 웹캠이 활성화되면 카메라 화면이 표시됩니다<sup>6</sup>....
-    * `c` 키를 누르면 현재 카메라 화면을 캡처하여 텍스트 감지 및 정보 추출 과정을 수행합니다<sup>9</sup>.
-    * 처리된 이미지 (텍스트 영역이 표시된 이미지)는 `./hellow-detection/output_detected_image_from_camera.jpg` 파일로 저장됩니다<sup>10</sup>.
-    * 추출된 텍스트 목록은 `./hellow-detection/extracted_text.txt` 파일로 저장됩니다<sup>10</sup>.
-    * 추출된 이름, 전화번호, 이메일 정보는 `./hellow-detection/extracted_info.txt` 파일로 저장됩니다<sup>7</sup>. 전화번호는 '-' 구분자로 연결되어 저장됩니다<sup>11</sup>.
-    * 처리된 결과 이미지가 화면에 표시됩니다<sup>7</sup>.
-    * `q` 키를 누르면 프로그램을 종료합니다<sup>12</sup>.
+    * 웹캠이 활성화되면 카메라 화면이 표시됩니다.
+    * `c` 키를 누르면 현재 카메라 화면을 캡처하여 텍스트 감지 및 정보 추출 과정을 수행합니다.
+    * 처리된 이미지 (텍스트 영역이 표시된 이미지)는 `./hellow-detection/output_detected_image_from_camera.jpg` 파일로 저장됩니다.
+    * 추출된 텍스트 목록은 `./hellow-detection/extracted_text.txt` 파일로 저장됩니다.
+    * 추출된 이름, 전화번호, 이메일 정보는 `./hellow-detection/extracted_info.txt` 파일로 저장됩니다. 전화번호는 '-' 구분자로 연결되어 저장됩니다.
+    * 처리된 결과 이미지가 화면에 표시됩니다.
+    * `q` 키를 누르면 프로그램을 종료합니다.
 
 ## 5.주요기능
 
@@ -54,22 +55,23 @@
     pip install opencv-python numpy pytesseract openvino-dev
     ```
 2.  **Tesseract OCR 엔진 설치:** Tesseract OCR 엔진을 별도로 설치해야 합니다. 운영체제에 맞는 설치 방법을 검색하여 설치하십시오. 또한, Python에서 Tesseract를 사용하기 위해 Tesseract 실행 파일의 경로를 `pytesseract`에 설정해야 할 수도 있습니다.
-3.  **OpenVINO 모델 다운로드 확인:** 프로젝트 실행 시 `horizontal-text-detection-0001` 모델이 `./hellow-detection/model` 디렉토리에 존재하는지 확인합니다<sup>1</sup>.... 모델이 없다면 다운로드해야 한다는 메시지가 출력되고 프로그램이 종료됩니다<sup>8</sup>. OpenVINO Model Downloader 또는 브라우저를 통해 직접 다운로드하여 해당 경로에 저장할 수 있습니다.
+3.  **OpenVINO 모델 다운로드 확인:** 프로젝트 실행 시 `horizontal-text-detection-0001` 모델이 `./hellow-detection/model` 디렉토리에 존재하는지 확인합니다. 
+모델이 없다면 다운로드해야 한다는 메시지가 출력되고 프로그램이 종료됩니다. OpenVINO Model Downloader 또는 브라우저를 통해 직접 다운로드하여 해당 경로에 저장할 수 있습니다.
 4.  **실행:**
     ```bash
-    python your_main_script.py  # 실제 실행 파일명으로 변경
+    python OpenVino_business_card.py  
     ```
 5.  **사용 방법:**
-    * 웹캠이 활성화되면 카메라 화면이 표시됩니다<sup>6</sup>....
-    * `c` 키를 누르면 현재 카메라 화면을 캡처하여 텍스트 감지 및 정보 추출 과정을 수행합니다<sup>9</sup>.
-    * 처리된 이미지 (텍스트 영역이 표시된 이미지)는 `./hellow-detection/output_detected_image_from_camera.jpg` 파일로 저장됩니다<sup>10</sup>.
-    * 추출된 텍스트 목록은 `./hellow-detection/extracted_text.txt` 파일로 저장됩니다<sup>10</sup>.
-    * 추출된 이름, 전화번호, 이메일 정보는 `./hellow-detection/extracted_info.txt` 파일로 저장됩니다<sup>7</sup>. 전화번호는 '-' 구분자로 연결되어 저장됩니다<sup>11</sup>.
-    * 처리된 결과 이미지가 화면에 표시됩니다<sup>7</sup>.
-    * `q` 키를 누르면 프로그램을 종료합니다<sup>12</sup>.
+    * 웹캠이 활성화되면 카메라 화면이 표시됩니다>....
+    * `c` 키를 누르면 현재 카메라 화면을 캡처하여 텍스트 감지 및 정보 추출 과정을 수행합니다.
+    * 처리된 이미지 (텍스트 영역이 표시된 이미지)는 `./hellow-detection/output_detected_image_from_camera.jpg` 파일로 저장됩니다.
+    * 추출된 텍스트 목록은 `./hellow-detection/extracted_text.txt` 파일로 저장됩니다.
+    * 추출된 이름, 전화번호, 이메일 정보는 `./hellow-detection/extracted_info.txt` 파일로 저장됩니다. 전화번호는 '-' 구분자로 연결되어 저장됩니다.
+    * 처리된 결과 이미지가 화면에 표시됩니다.
+    * `q` 키를 누르면 프로그램을 종료합니다.
 
 ## 6.고려 사항 및 개선점 
 
-* **흑백 이미지 처리:** 흑백으로 변환된 이미지에서 텍스트 인식률이 저하되는 현상이 있었습니다<sup>13</sup>. 이미지 전처리 과정 개선을 통해 이 문제를 완화할 수 있습니다<sup>13</sup>.
-* **이름 인식 정확도 향상:** 단순히 성씨로 시작하는 단어를 이름으로 인식하기 때문에, 성씨가 아닌 단어가 이름으로 잘못 인식될 수 있습니다<sup>6</sup>.... 데이터베이스 확충 및 자연어 처리 기술을 도입하여 이름 인식 정확도를 높일 수 있습니다<sup>13</sup>.
-* **외부 환경 요인:** 빛, 카메라 각도, 흔들림 등 외부 환경 요인에 따라 텍스트 감지 및 인식 성능이 저하될 수 있습니다<sup>13</sup>. 안정적인 촬영 환경을 안내하고, 이미지 품질 향상 기술을 추가적으로 적용하도록 하겠습니다<sup>13</sup>.
+* **흑백 이미지 처리:** 흑백으로 변환된 이미지에서 텍스트 인식률이 저하되는 현상이 있었습니다. 이미지 전처리 과정 개선을 통해 이 문제를 완화할 수 있습니다.
+* **이름 인식 정확도 향상:** 단순히 성씨로 시작하는 단어를 이름으로 인식하기 때문에, 성씨가 아닌 단어가 이름으로 잘못 인식될 수 있습니다. 데이터베이스 확충 및 자연어 처리 기술을 도입하여 이름 인식 정확도를 높일 수 있습니다.
+* **외부 환경 요인:** 빛, 카메라 각도, 흔들림 등 외부 환경 요인에 따라 텍스트 감지 및 인식 성능이 저하될 수 있습니다. 안정적인 촬영 환경을 안내하고, 이미지 품질 향상 기술을 추가적으로 적용하도록 하겠습니다.
