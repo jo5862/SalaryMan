@@ -24,8 +24,8 @@
 ## 3.시스템 구성
 ![Flowchart](./img/01_flowchart.png)
 1.  **웹 카메라 입력:** 실시간으로 명함 이미지를 캡처합니다.
-2.  **OpenVINO 텍스트 감지** 캡쳐 이미지에서 텍스트 영역 감지.
-3.  **Tesseract OCR 텍스트 추출** 감지 영역 내 
+2.  **OpenVINO 텍스트 감지** 캡쳐 이미지에서 텍스트 영역 감지합니다.
+3.  **Tesseract OCR 텍스트 추출** 감지 영역 내 텍스트를 추출합니다.
 ## 4.설치 및 실행방법
 
 1.  **필수 라이브러리 설치:**
@@ -50,25 +50,11 @@
 
 ## 5.주요기능
 
-1.  **필수 라이브러리 설치:**
-    ```bash
-    pip install opencv-python numpy pytesseract openvino-dev
-    ```
-2.  **Tesseract OCR 엔진 설치:** Tesseract OCR 엔진을 별도로 설치해야 합니다. 운영체제에 맞는 설치 방법을 검색하여 설치하십시오. 또한, Python에서 Tesseract를 사용하기 위해 Tesseract 실행 파일의 경로를 `pytesseract`에 설정해야 할 수도 있습니다.
-3.  **OpenVINO 모델 다운로드 확인:** 프로젝트 실행 시 `horizontal-text-detection-0001` 모델이 `./hellow-detection/model` 디렉토리에 존재하는지 확인합니다. 
-모델이 없다면 다운로드해야 한다는 메시지가 출력되고 프로그램이 종료됩니다. OpenVINO Model Downloader 또는 브라우저를 통해 직접 다운로드하여 해당 경로에 저장할 수 있습니다.
-4.  **실행:**
-    ```bash
-    python OpenVino_business_card.py  
-    ```
-5.  **사용 방법:**
-    * 웹캠이 활성화되면 카메라 화면이 표시됩니다>....
-    * `c` 키를 누르면 현재 카메라 화면을 캡처하여 텍스트 감지 및 정보 추출 과정을 수행합니다.
-    * 처리된 이미지 (텍스트 영역이 표시된 이미지)는 `./hellow-detection/output_detected_image_from_camera.jpg` 파일로 저장됩니다.
-    * 추출된 텍스트 목록은 `./hellow-detection/extracted_text.txt` 파일로 저장됩니다.
-    * 추출된 이름, 전화번호, 이메일 정보는 `./hellow-detection/extracted_info.txt` 파일로 저장됩니다. 전화번호는 '-' 구분자로 연결되어 저장됩니다.
-    * 처리된 결과 이미지가 화면에 표시됩니다.
-    * `q` 키를 누르면 프로그램을 종료합니다.
+![detect](./img/02_detect.png)
+1.  **실시간 명함 이미지 캡처:** 웹캠을 통해 실시간으로 명함 이미지를 캡처합니다.
+2.  **OpenVINO 기반 텍스트 감지:** 캡처된 이미지에서 OpenVINO 모델을 사용하여 텍스트 영역을 감지합니다.
+3.  **Tesseract OCR 엔진을 통한 텍스트 추출:** 감지된 텍스트 영역에서 Tesseract OCR 엔진을 사용하여 텍스트를 추출합니다.
+4.  **추출된 정보 저장:** 추출된 텍스트 및 개인 정보(이름, 전화번호, 이메일)를 파일로 저장합니다.
 
 ## 6.고려 사항 및 개선점 
 
